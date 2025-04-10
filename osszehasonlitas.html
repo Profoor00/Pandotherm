@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Termék Összehasonlítás - Pandotherm</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+</head>
+<body class="main-layout position_head">
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="header">
+           <div class="container-fluid">
+              <div class="row">
+                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                    <div class="full">
+                       <div class="center-desk">
+                          <div class="logo">
+                             <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                    <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                       </button>
+                       <div class="collapse navbar-collapse" id="navbarsExample04">
+                          <ul class="navbar-nav mr-auto">
+                             <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Főoldal</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="glasses.html">Webshop</a>
+                             </li>
+                             <li class="nav-item">
+                              <!-- Kosár fül -->
+                              <li class="nav-item cart">
+                                <a class="nav-link" href="cart.html">
+                                   <i class="fa fa-shopping-cart"></i> Kosár
+                                </a>
+                             <div class="cart-dropdown">
+                                <div class="cart-item">Termék 1</div>
+                                <div class="cart-item">Termék 2</div>
+                                <div class="cart-item">Termék 3</div>
+                                <div class="cart-buttons">
+                                   <button class="btn btn-danger">Kosár törlése</button>
+                                   <a href="cart.html" class="btn btn-success">Tovább a fizetéshez</a>
+                                </div>
+                             <div class="dropdown">
+                                <div class="dropdown-content">
+                                   <a href="#">Link 1</a>
+                                   <a href="#">Link 2</a>
+                                   <a href="#">Link 3</a>
+                               </div>
+                             </div>
+                          </li>
+                             <!-- Kosár fül vége -->
+                             <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Kapcsolat</a>
+                               </li>
+                          </ul>
+                       </div>
+                    </nav>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </header>
+    <!-- end header -->
+
+    <!-- Összehasonlító szekció -->
+    <div class="container mt-5">
+        <h2>Termékek Összehasonlítása</h2>
+        <form id="comparisonForm">
+            <div class="form-group">
+                <label for="product1">Válassza ki az első terméket:</label>
+                <select class="form-control" id="product1">
+                    <option value="1">KLÍMA RCOOL SOLO 2 (5,3 kW)</option>
+                    <option value="2">KLÍMA AUX AURA (2,7 kW A+++)</option>
+                    <option value="3">KLÍMA AUX AURA (3,5 kW A+++)</option>
+                    <option value="4">KLÍMA AUX DELTA 2 (2,7 kW TÁLCAFŰTÉSSEL)</option>
+                    <option value="5">Midea Xtreme Save split (3,5 kw)</option>
+                    <option value="6">Midea Xtreme Save Pro split (3,5 kw)</option>
+                    <option value="7">Midea Breezeless split (3,5 kw)</option>
+                    <option value="8">KLÍMA AUX AURA 5,4 kW (A+++)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="product2">Válassza ki a második terméket:</label>
+                <select class="form-control" id="product2">
+                    <option value="1">KLÍMA RCOOL SOLO 2 (5,3 kW)</option>
+                    <option value="2">KLÍMA AUX AURA (2,7 kW A+++)</option>
+                    <option value="3">KLÍMA AUX AURA (3,5 kW A+++)</option>
+                    <option value="4">KLÍMA AUX DELTA 2 (2,7 kW TÁLCAFŰTÉSSEL)</option>
+                    <option value="5">Midea Xtreme Save split (3,5 kw)</option>
+                    <option value="6">Midea Xtreme Save Pro split (3,5 kw)</option>
+                    <option value="7">Midea Breezeless split (3,5 kw)</option>
+                    <option value="8">KLÍMA AUX AURA 5,4 kW (A+++)</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Összehasonlítás</button>
+        </form>
+        <div id="comparisonResult" class="mt-4"></div>
+    </div>
+    <!-- end Összehasonlító szekció -->
+
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+     document.getElementById('comparisonForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Megakadályozza az űrlap alapértelmezett elküldését
+            const product1 = document.getElementById('product1').value;
+            const product2 = document.getElementById('product2').value;
+
+            // Összehasonlítási eredmény megjelenítése
+            const comparisonResult = document.getElementById('comparisonResult');
+            comparisonResult.innerHTML = `<h4>Összehasonlítás eredménye:</h4>
+                                          <p>Első termék: ${getProductName(product1)}</p>
+                                          <p>Második termék: ${getProductName(product2)}</p>`;
+        });
+
+        function getProductName(productId) {
+            switch (productId) {
+                case "1": return "KLÍMA RCOOL SOLO 2 (5,3 kW)";
+                case "2": return "KLÍMA AUX AURA (2,7 kW A+++)";
+                case "3": return "KLÍMA AUX AURA (3,5 kW A+++)";
+                case "4": return "KLÍMA AUX DELTA 2 (2,7 kW TÁLCAFŰTÉSSEL)";
+                case "5": return "Midea Xtreme Save split (3,5 kw)";
+                case "6": return "Midea Xtreme Save Pro split (3,5 kw)";
+                case "7": return "Midea Breezeless split (3,5 kw)";
+                case "8": return "KLÍMA AUX AURA 5,4 kW (A+++)";
+                default: return "Ismeretlen termék";
+            }
+        }   
+    </script>
+</body>
+</html>
