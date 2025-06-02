@@ -24,7 +24,10 @@
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+      <script type="module" src="https://unpkg.com/@material/web/all.js?module"></script>
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -115,99 +118,12 @@
             </div>
          </div>
          <div class="container-fluid">
-            <div class="row">
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
-                     <figure><img src="images/glass1.png" alt="#"/></figure>
-                     <div class="favorite-icon" onclick="toggleFavorite(this)">
-                        <i class="fa fa-heart"></i>
-                     </div>
-                     <h3><span class="blu">100000</span> Ft</h3>
-                     <p>KLÍMA RCOOL SOLO 2 (5,3 kW)</p>
-                     <a class="read_more" href="buy1.html">Információ</a>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
-                     <figure><img src="images/glass2.png" alt="#"/></figure>
-                     <div class="favorite-icon" onclick="toggleFavorite(this)">
-                        <i class="fa fa-heart"></i>
-                     </div>
-                     <h3><span class="blu">100000</span> Ft</h3>
-                     <p>KLÍMA AUX AURA (2,7 kW A+++)</p>
-                     <a class="read_more" href="buy2.html">Információ</a>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
-                     <figure><img src="images/glass3.png" alt="#"/></figure>
-                     <div class="favorite-icon" onclick="toggleFavorite(this)">
-                        <i class="fa fa-heart"></i>
-                     </div>
-                     <h3><span class="blu">100000</span> Ft</h3>
-                     <p>KLÍMA AUX AURA (3,5 kW A+++)</p>
-                     <a class="read_more" href="buy3.html">Információ</a>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
-                     <figure><img src="images/glass4.png" alt="#"/></figure>
-                     <div class="favorite-icon" onclick="toggleFavorite(this)">
-                        <i class="fa fa-heart"></i>
-                     </div>
-                     <h3><span class="blu">100000</span> Ft</h3>
-                     <p>KLÍMA AUX DELTA 2 (2,7 kW)</p>
-                     <a class="read_more" href="buy4.html">Információ</a>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
-                     <figure><img src="images/glass5.png" alt="#"/></figure>
-                     <div class="favorite-icon" onclick="toggleFavorite(this)">
-                        <i class="fa fa-heart"></i>
-                     </div>
-                     <h3><span class="blu">100000</span> Ft</h3>
-                     <p>Midea Xtreme Save split (3,5 kw)</p>
-                     <a class="read_more" href="buy5.html">Információ</a>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
-                     <figure><img src="images/glass6.png" alt="#"/></figure>
-                     <div class="favorite-icon" onclick="toggleFavorite(this)">
-                        <i class="fa fa-heart"></i>
-                     </div>
-                     <h3><span class="blu">100000</span> Ft</h3>
-                     <p>Midea Xtreme Save Pro split (3,5 kw)</p>
-                     <a class="read_more" href="buy6.html">Információ</a>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
-                     <figure><img src="images/glass7.png" alt="#"/></figure>
-                     <div class="favorite-icon" onclick="toggleFavorite(this)">
-                        <i class="fa fa-heart"></i>
-                     </div>
-                     <h3><span class="blu">100000</span> Ft</h3>
-                     <p>Midea Breezeless split (3,5 kw)</p>
-                     <a class="read_more" href="buy7.html">Információ</a>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
-                     <figure><img src="images/glass8.png" alt="#"/></figure>
-                     <div class="favorite-icon" onclick="toggleFavorite(this)">
-                        <i class="fa fa-heart"></i>
-                     </div>
-                     <h3><span class="blu">100000</span> Ft</h3>
-                     <p>KLÍMA AUX AURA 5,4 kW (A+++)</p>
-                     <a class="read_more" href="buy8.html">Információ</a>
-                  </div>
-               </div>
+            <div class="container-fluid">
+               <div id="products-container" class="row"></div>
             </div>
          </div>
       </div>
-      <div class="glasses">
+      <!-- <div class="glasses">
          <div class="container">
             <div class="row">
                <div class="col-md-10 offset-md-1">
@@ -311,7 +227,7 @@
                </div>
             </div>
          </div>
-      </div>
+      </div> -->
       <!-- end Our  Glasses section -->
       <!--  footer -->
       <footer>
@@ -347,6 +263,96 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
+      <script>
+         let allAirConditioners = [];
+         function setDummyConditionerStyle(element) {
+            element.style.opacity = 0.2;
+         }
+
+         function addClickingFunction(link, item) {
+            link.addEventListener('click', (e) => {
+               e.preventDefault();
+               // showDetails(item);
+            });
+         }
+
+         function createAirConditionerListItems(data) {
+            const container = document.getElementById('products-container');
+            container.innerHTML = '';
+            data.forEach(item => {
+               if (item.Raktarkeszlet > 0)
+               {
+                  const {
+                     Cikkszam, 
+                     Termek_Nev, 
+                     Statusz, 
+                     Kategoria, 
+                     Rovid_leiras, 
+                     Hosszu_leiras, 
+                     Raktarkeszlet, 
+                     Egyseg, 
+                     Ar__Partner_IV, 
+                     Ar_tipus__Partner_IV, 
+                     Parameter__Gyartotext,
+                     Parameter__Gyartoi_cikkszamtext
+                  } = item;
+                  const tempDiv = document.createElement('div');
+                  
+                  tempDiv.innerHTML = `
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                     <div class="mdc-card mdc-elevation--z4 mb-5 custom-mdc-card">
+                     <figure style="margin: 0;">
+                        <img 
+                           src="images/${Cikkszam}.png" 
+                           class="custom-image" 
+                           onerror="this.onerror=null; 
+                           setDummyConditionerStyle(this); 
+                           this.src='images/dummy_conditioner.png';" 
+                           style="width: 100%; height: auto; border-radius: 8px;">
+                        <!--img
+                           class="custom-image" 
+                           onerror="this.onerror=null; 
+                           setDummyConditionerStyle(this); 
+                           this.src='images/dummy_conditioner.png';" 
+                           style="width: 100%; height: auto; border-radius: 8px;"-->
+                     </figure>
+                     <h3 style="margin: 0;">
+                        <span class="blu">${Ar__Partner_IV}</span> Ft
+                     </h3>
+                     <p style="text-align: center; margin: 0;">${Termek_Nev}</p>
+                     <md-outlined-button class="read_more w-100 mt-3" onclick="navigateToDetails()">Információ</md-outlined-button>
+                     </div>
+                  </div>
+                  `;
+                  const productElement = tempDiv.firstElementChild;
+                  const link = productElement.querySelector('.read_more');
+
+                  addClickingFunction(link, item);
+                  container.appendChild(productElement);
+               }
+            });
+         }
+
+         function navigateToDetails() {
+            window.location.href = "buy2.html";
+         }
+
+         async function loadAirConditioners() {
+            try {
+               const response = await fetch("legkondicionalok.json");
+               if (!response.ok) {
+                  throw new Error(`HTTP error! Status: ${response.status}`);
+               }
+               const data = await response.json();
+               allAirConditioners = data;
+               createAirConditionerListItems(data);
+            } catch (error) {
+               console.error("Hiba a JSON betöltésekor:", error);
+            }
+         }
+
+         loadAirConditioners();
+      </script>
    </body>
 </html>
 
